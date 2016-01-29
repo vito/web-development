@@ -1,0 +1,13 @@
+---
+platform: linux
+
+image: docker:///jujhars13/docker-imagemagick
+
+inputs:
+- name: web-development
+
+outputs:
+- name: jimmer
+
+run:
+  path: web-development/ci/jimmer

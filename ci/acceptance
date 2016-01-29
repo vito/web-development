@@ -1,0 +1,5 @@
+#!/bin/sh
+
+git clone web-development acceptance
+cp jimmer/web.jpg acceptance
+git -C acceptance commit -am "sigh"

@@ -1,0 +1,27 @@
+---
+resources:
+- name: web-development
+  type: git
+  source:
+    uri: "https://github.com/vito/web-development"
+    branch: master
+
+- name: despair
+  type: git
+  source:
+    uri: "git@github.com:vito/web-development"
+    branch: master
+    private_key: {{despair-private-key}}
+
+jobs:
+- name: attempt
+  public: true
+  serial: true
+  plan:
+  - get: web-development
+  - task: disappointment
+    file: web-development/ci/disappointment.yml
+  - task: acceptance
+    file: web-development/ci/acceptance.yml
+  - put: despair
+    params: {repository: acceptance}

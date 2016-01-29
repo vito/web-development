@@ -1,0 +1,14 @@
+---
+platform: linux
+
+image: docker:///concourse/git-resource
+
+inputs:
+- name: web-development
+- name: jimmer
+
+outputs:
+- name: acceptance
+
+run:
+  path: web-development/ci/acceptance

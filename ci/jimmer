@@ -1,0 +1,3 @@
+#!/bin/sh
+
+convert web-development/web.jpg -scale 200% jimmer/web.jpg
