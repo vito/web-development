@@ -1,7 +1,9 @@
 ---
 platform: linux
 
-image: docker:///jujhars13/docker-imagemagick
+image_resource:
+  type: docker-image
+  source: {repository: jujhars13/docker-imagemagick}
 
 inputs:
 - name: web-development
