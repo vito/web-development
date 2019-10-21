@@ -3,7 +3,7 @@ platform: linux
 
 image_resource:
   type: registry-image
-  source: {repository: jujhars13/docker-imagemagick}
+  source: {repository: rafakato/alpine-graphicsmagick}
 
 inputs:
 - name: web-development
